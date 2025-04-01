@@ -10,21 +10,30 @@ header{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: var(--color-primary);
+    background-color: #1A1E1F;
 }
 .header__title {
-    background: red;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
     gap: 10px;
     padding-top: 30px;
     padding-right: 30px;
     padding-bottom: 20px;
     padding-left: 30px;
+}
+.header__title::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 214px;
+    background: var(--background-color);
+    clip-path: ellipse(100% 100% at 60% 0%);
 }
 .header__title-search {
     background: turquoise;
