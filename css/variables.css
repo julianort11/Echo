@@ -1,6 +1,6 @@
 :root{
-    --color-background: #ecf0f1;
-    --color-text: #2c3e50;
+    --background-color: rgb(63, 94, 251)linear-gradient(139deg, rgb(63, 94, 251) 0%, rgb(149, 83, 185) 41%, rgb(252, 70, 106) 100%);
+    
 }
 
 /* @font-face {
