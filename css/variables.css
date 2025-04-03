@@ -1,9 +1,17 @@
 :root{
-    --background-color: rgb(63, 94, 251)linear-gradient(139deg, rgb(63, 94, 251) 0%, rgb(149, 83, 185) 41%, rgb(252, 70, 106) 100%);
-    
+    --background-color: linear-gradient(139deg, rgb(63, 94, 251) 0%, rgb(149, 83, 185) 41%, rgb(252, 70, 106) 100%);
 }
 
-/* @font-face {
-    font-family: ;
-    src: url();
-} */
+@font-face {
+    font-family: "orbitron";
+    src: url(../storage/fond/Orbitron/static/Orbitron-Bold.ttf);
+}
+@font-face {
+    font-family: "Hyperlegible-Bold";
+    src: url(../storage/fond/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf);
+}
+@font-face {
+    font-family: "Hyperlegible-Regular";
+    src: url(../storage/fond/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf);
+}
+

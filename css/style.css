@@ -11,6 +11,13 @@ header{
     justify-content: center;
     gap: 10px;
     background-color: #1A1E1F;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas: "header__title",
+                        "header__info"  ;
 }
 .header__title {
     width: 100%;
@@ -25,15 +32,30 @@ header{
     padding-right: 30px;
     padding-bottom: 20px;
     padding-left: 30px;
+
+    h1{
+        color: black;
+        font-family: "orbitron";
+        font-size: 60px;
+    };
+    h2{
+        font-family: "Hyperlegible-Bold";
+        font-size: 25px;
+    }
+    .discover__page{
+        font-family: "Hyperlegible-Regular";
+        font-size: 20px;
+    }
 }
+
 .header__title::after{
     content: "";
     position: absolute;
     width: 100%;
     z-index: -1;
-    height: 214px;
+    height: 100%;
     background: var(--background-color);
-    clip-path: ellipse(100% 100% at 60% 0%);
+    clip-path: ellipse(62% 70% at 50% 0%);
 }
 .header__title-search {
     background: turquoise;
@@ -42,12 +64,12 @@ header{
     border-radius: 10px;
 }
 .header__information {
-    background: blue;
+    /* background: blue; */
     width: auto;
     display: flex;
-    justify-content: space-between;
     padding: 20px;
     gap: 20px;
+    justify-content: space-around;
 }
 .cards__info {
     background: green;
@@ -58,7 +80,4 @@ header{
     align-items: center;
     justify-content: start;
     padding: 15px;
-    border-radius: 10px;
-    border: 5px solid transparent;
-    border-color: var(--background-color);
 }
