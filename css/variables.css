@@ -1,5 +1,7 @@
 :root{
+    --background-1: #1A1E1F;
     --background-color: linear-gradient(139deg, rgb(63, 94, 251) 0%, rgb(149, 83, 185) 41%, rgb(252, 70, 106) 100%);
+    --color-1: #fff;
 }
 
 @font-face {
@@ -11,7 +13,10 @@
     src: url(../storage/fond/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf);
 }
 @font-face {
-    font-family: "Hyperlegible-Regular";
-    src: url(../storage/fond/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf);
+    font-family: "MuktaMalar-Medium";
+    src: url(../storage/fond/Mukta_Malar/MuktaMalar-Medium.ttf);
 }
-
+@font-face {
+    font-family: "MuktaMalar-Bold";
+    src: url(../storage/fond/Mukta_Malar/MuktaMalar-Bold.ttf);
+}

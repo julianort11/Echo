@@ -10,14 +10,7 @@ header{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #1A1E1F;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px 10px;
-    grid-template-areas: "header__title",
-                        "header__info"  ;
+    background-color: var(--background-1);
 }
 .header__title {
     width: 100%;
@@ -27,23 +20,36 @@ header{
     align-items: center;
     justify-content: center;
     z-index: 1;
-    gap: 10px;
     padding-top: 30px;
     padding-right: 30px;
     padding-bottom: 20px;
     padding-left: 30px;
 
     h1{
-        color: black;
+        color: var(--color-1);
         font-family: "orbitron";
         font-size: 60px;
     };
+
+}
+
+.header__title-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    height: 100px;
+    width: 500px;
+    text-align: center;
+    gap: 10px;
     h2{
+        color: var(--color-1);
         font-family: "Hyperlegible-Bold";
         font-size: 25px;
     }
-    .discover__page{
-        font-family: "Hyperlegible-Regular";
+    span{
+        color: var(--color-1);
+        font-family: "MuktaMalar-Medium";
         font-size: 20px;
     }
 }
@@ -58,26 +64,70 @@ header{
     clip-path: ellipse(62% 70% at 50% 0%);
 }
 .header__title-search {
-    background: turquoise;
-    margin-top: 15px;
-    padding: 10px;
+    background: var(--color-1);
+    font-family: "MuktaMalar-Medium";
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
     border-radius: 10px;
 }
 .header__information {
     /* background: blue; */
     width: auto;
     display: flex;
-    padding: 20px;
-    gap: 20px;
+    padding: 40px;
+    gap: 50px;
     justify-content: space-around;
+    margin-top: 20px;
+    
 }
 .cards__info {
-    background: green;
+    /* background: green; */
     display: flex;
     gap: 17px;
     width: 270px;
-    height: 60px;
+    height: 70px;
     align-items: center;
     justify-content: start;
     padding: 15px;
+    border: 5px solid;
+    border-color: green;
+}
+
+.num__cards{
+    font-family: "MuktaMalar-Bold";
+    color: var(--color-1);
+    font-size: 18px;
+}
+/*************** main *********************/ 
+.section__search {
+    background: var(--background-1);
+    padding: 20px;
+}
+.artcicle__tittle-search {
+    /* background: green; */
+    display: flex;
+    justify-content: space-between;
+}
+.div__search-info {
+    /* background: red; */
+    padding-left: 20px;
+    font-size: 18px;
+    font-family: "Hyperlegible-Bold";
+    color: var(--color-1);
+}
+.div__search {
+    /* background: aqua; */
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.search{
+    width: 300px;
+    border-radius: 10px;
+    padding: 5px;
+    height: 40px;
 }
