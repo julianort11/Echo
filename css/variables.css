@@ -1,5 +1,6 @@
 :root{
     --background-1: #1A1E1F;
+    --border-gradient: linear-gradient(139deg, rgb(63, 94, 251), rgb(149, 83, 185), rgb(252, 70, 106));;
     --background-color: linear-gradient(139deg, rgb(63, 94, 251) 0%, rgb(149, 83, 185) 41%, rgb(252, 70, 106) 100%);
     --color-1: #fff;
 }

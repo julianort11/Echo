@@ -51,6 +51,7 @@ header{
         color: var(--color-1);
         font-family: "MuktaMalar-Medium";
         font-size: 20px;
+        line-height: 1.5;
     }
 }
 
@@ -65,6 +66,7 @@ header{
 }
 .header__title-search {
     background: var(--color-1);
+    cursor: pointer;
     font-family: "MuktaMalar-Medium";
     margin-top: 20px;
     padding-top: 10px;
@@ -72,6 +74,7 @@ header{
     padding-bottom: 10px;
     padding-left: 20px;
     border-radius: 10px;
+    
 }
 .header__information {
     /* background: blue; */
@@ -83,8 +86,14 @@ header{
     margin-top: 20px;
     
 }
+.border{
+    padding: 4px;
+    background: var(--border-gradient);
+    border-radius: 12px;
+    display: inline-block;
+}
 .cards__info {
-    /* background: green; */
+    background: var(--background-1);
     display: flex;
     gap: 17px;
     width: 270px;
@@ -92,14 +101,13 @@ header{
     align-items: center;
     justify-content: start;
     padding: 15px;
-    border: 5px solid;
-    border-color: green;
+    border-radius: 10px;
 }
-
 .num__cards{
     font-family: "MuktaMalar-Bold";
     color: var(--color-1);
     font-size: 18px;
+    line-height: 1;
 }
 /*************** main *********************/ 
 .section__search {
@@ -130,4 +138,41 @@ header{
     border-radius: 10px;
     padding: 5px;
     height: 40px;
+}
+/*****************sections artist***************************/
+.trending__music {
+    background: var(--background-1);
+    padding: 35px;
+    font-family: "Hyperlegible-Bold";
+    color: var(--color-1);
+}
+.article__trending {
+    background: red;
+    padding: 20px;
+}
+.div__trending {
+}
+.section__artist {
+    background: var(--background-1);
+    padding: 35px;
+    font-family: "Hyperlegible-Bold";
+    color: var(--color-1);
+}
+.article__artist {
+    background: red;
+    padding: 20px;
+}
+.div__artist {
+}
+.section__albums {
+    background: var(--background-1);
+    padding: 35px;
+    font-family: "Hyperlegible-Bold";
+    color: var(--color-1);
+}
+.article__albums {
+    background: red;
+    padding: 20px;trends in progress
+}
+.div__albums {
 }
