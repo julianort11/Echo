@@ -1,17 +1,10 @@
-const clientId = '3fa44e2553984c5996203a70c90218db';
-const clientSecret = 'a5eff147f309429a98184f69555ef014'; 
-
-async function getAccessToken() {
-    const result = await fetch('https://accounts.spotify.com/api/token', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
-      },
-      body: 'grant_type=client_credentials'
-    });
+window.mostrarDatos = function (data) {
+    console.log("Conexión exitosa con deezer:");
+    console.log(data); 
+  };
   
-    const data = await result.json();
-    return data.access_token;
-  }
-  
+  document.addEventListener("DOMContentLoaded", () => {
+    const script = document.createElement("script");
+    script.src = "https://api.deezer.com/chart?output=jsonp&callback=mostrarDatos";
+    document.body.appendChild(script);
+  });

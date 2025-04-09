@@ -131,7 +131,7 @@ header{
     width: 400px;
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 .search{
     width: 300px;
