@@ -4,14 +4,14 @@ function cardArtists() {
         divArtist.innerHTML = "";
 
         data.artists.data.forEach((artist) => {
-            const card = document.createElement("div");
-            card.classList.add("card");
+            const artista = {
+                id: artist.id,
+                title: artist.name,
+                artist: "",
+                image: artist.picture_medium,
+            };
 
-            card.innerHTML = `
-            <img src="${artist.picture_medium}" alt="${artist.name}" />
-            <h3>${artist.name}</h3>
-            `;
-
+            const card = crearCard(artista, "artistas")
             divArtist.appendChild(card);
         });
     };
@@ -20,3 +20,5 @@ function cardArtists() {
     script.src = "https://api.deezer.com/chart?output=jsonp&callback=mostrarArtistasTendencia";
     document.body.appendChild(script);
 };
+
+window.cardArtists = cardArtists

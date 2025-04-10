@@ -4,15 +4,14 @@ function cardSongs() {
         divSongs.innerHTML = "";
 
         data.tracks.data.forEach((track) => {
-            const card = document.createElement("div");
-            card.classList.add("card");
+            const cancion = {
+                id: track.id,
+                title: track.title,
+                artist: track.artist.name,
+                image: track.album.cover_medium,
+            };
 
-            card.innerHTML = `
-            <img src="${track.album.cover}" alt="Portada del álbum" />
-            <h3>${track.title}</h3>
-            <p>${track.artist.name}</p>
-            `;
-
+            const card = crearCard (cancion, "canciones");
             divSongs.appendChild(card);
         });
 
@@ -22,3 +21,5 @@ function cardSongs() {
     script.src = "https://api.deezer.com/chart?output=jsonp&callback=mostrarCancionesTendencia";
     document.body.appendChild(script);
 };
+
+window.cardSongs = cardSongs;
