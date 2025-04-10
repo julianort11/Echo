@@ -1,5 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    cardArtist();
-    viewArtists ();
- })
+    cardSongs()
+    cardArtists()
+    cardAlbums()        
+ });
