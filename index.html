@@ -8,7 +8,7 @@
     <script src="./js/trending-songs.js" defer></script>
     <script src="./js/trending-albums.js" defer></script>
     <script src="./js/trending-artists.js" defer></script>
-    <script src="./js/main.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -31,7 +31,7 @@
                     <div class="num__cards">
                         <img src="" alt="">
                         <span>Artistas</span>
-                        <h4>42</h4>
+                        <h4 id="counter__artists">0</h4>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                     <img src="#">
                     <div class="num__cards">
                         <span>Álbumes</span>
-                        <h4>42</h4>
+                        <h4 id="counter__albums">0</h4>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                     <img src="#">
                     <div class="num__cards">
                         <span>Canciones</span>
-                        <h4>42</h4>
+                        <h4 id="counter__songs">0</h4>
                     </div>
                 </div>
             </div>
@@ -70,25 +70,31 @@
         <section class="trending__music">
             <h1>Canciones en tendencia</h1>
             <article class="article__trending">
-                <div class="div__songs">
-                    
+                <button class="carousel__btn left"> < </button>
+                <div class="carousel__container div__songs">
+                    <!-------cards music-------->
                 </div>
+                <button class="carousel__btn right"> > </button>
             </article>
         </section>
         <section class="section__artist">
             <h1>Artistas en tendencia</h1>
-            <article class="article__artist">
-                <div class="div__artist">
-
+            <article class="article__trending">
+                <button class="carousel__btn left"> < </button>
+                <div class="carousel__container div__artist">
+                    <!-------cards artist-------->
                 </div>
+                <button class="carousel__btn right"> > </button>
             </article>
         </section>
         <section class="section__albums">
             <h1>Albunes en tendencia</h1>
-            <article class="article__albums">
-                <div class="div__albums">
-
+            <article class="article__trending">
+                <button class="carousel__btn left"> < </button>
+                <div class="carousel__container div__albums">
+                    <!-------cards albums-------->
                 </div>
+                <button class="carousel__btn right"> > </button>
             </article>
         </section>
     </main>
