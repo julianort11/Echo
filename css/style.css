@@ -4,109 +4,131 @@
     padding: 0;
     box-sizing: border-box;
 }
-header{
+html {
+    scroll-behavior: smooth;
+}
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     background-color: var(--background-1);
+    height: 100vh;
+    padding: 30px 20px;
+    position: relative;
 }
+
+@keyframes moverGradiente {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0; 
+    background: var(--background-color);
+    clip-path: ellipse(100% 100% at 50% 50%);
+    animation: fondoAnimado 10s ease-in-out infinite, moverGradiente 8s ease-in-out infinite;
+    background-size: 200% 200%;
+}
+
 .header__title {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-
-    h1{
-        color: var(--color-1);
-        font-family: "orbitron";
-        font-size: 60px;
-    };
-
 }
 
-.header__title-info{
+.header__title h1 {
+    color: var(--color-1);
+    font-family: "orbitron";
+    font-size: 140px;
+    text-align: center;
+}
+
+.header__title-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    height: 100px;
-    width: 500px;
+    margin-top: 10px;
+    width: 90%;
+    max-width: 400px;
     text-align: center;
-    gap: 10px;
-    h2{
+    gap: 8px;
+
+    h2 {
         color: var(--color-1);
         font-family: "Hyperlegible-Bold";
-        font-size: 25px;
+        font-size: 35px; 
     }
-    span{
+
+    span {
         color: var(--color-1);
         font-family: "MuktaMalar-Medium";
-        font-size: 20px;
+        font-size: 22px;
         line-height: 1.5;
     }
 }
 
-.header__title::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    background: var(--background-color);
-    clip-path: ellipse(62% 70% at 50% 0%);
-}
 .header__title-search {
     background: var(--color-1);
     cursor: pointer;
-    font-family: "MuktaMalar-Medium";
-    margin-top: 20px;
-    padding-top: 10px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    padding-left: 20px;
+    margin-top: 40px;
+    padding: 10px 40px;
     border-radius: 10px;
     
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-family: "MuktaMalar-Medium";
+        font-size: 20px;
+    }
 }
+
 .header__information {
-    /* background: blue; */
-    width: auto;
+    width: 100%;
     display: flex;
-    padding: 40px;
-    gap: 50px;
-    justify-content: space-around;
-    margin-top: 20px;
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    z-index: 1;
 }
-.border{
+
+.border {
     padding: 4px;
     background: var(--border-gradient);
     border-radius: 12px;
     display: inline-block;
 }
+
 .cards__info {
     background: var(--background-1);
     display: flex;
-    gap: 17px;
-    width: 270px;
-    height: 70px;
+    gap: 25px;
+    width: 373px;
+    height: 97px;
     align-items: center;
     justify-content: start;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
 }
-.num__cards{
+
+.cards__info img {
+    width: 35px;
+}
+
+.num__cards {
     font-family: "MuktaMalar-Bold";
     color: var(--color-1);
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1;
 }
 /*************** main *********************/ 
@@ -122,7 +144,7 @@ header{
 .div__search-info {
     /* background: red; */
     padding-left: 20px;
-    font-size: 18px;
+    font-size: 25px;
     font-family: "Hyperlegible-Bold";
     color: var(--color-1);
 }
@@ -172,7 +194,7 @@ header{
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.149);
     overflow: hidden;
     cursor: pointer;
-  }
+}
 
 .card:hover {
     transform: scale(1.05);
@@ -185,31 +207,28 @@ header{
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
-  }
+}
 
-  .card__body {
+.card__body {
     padding: 10px;
     color: white;
-  }
+}
 
-  .card__title {
-    font-family: "";
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    text-align: center;
-  }
-  
-  .card p {
-    font-size: 0.9rem;
-    font-weight: normal;
+.card__title {
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+    
+.card p {
+    font-family: "MuktaMalar-Bold";
+    font-size: 1.4rem;
     color: #ccc;
   }
 
-  .card__subtitle {
+.card__subtitle {
     font-size: 0.9rem;
     color: #ccc;
     margin-top: 4px;
@@ -217,7 +236,7 @@ header{
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: center;
-  }
+}
 /*******me gusta******************/
 .card__like {
     position: absolute;
@@ -246,8 +265,8 @@ header{
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 20px;
-    padding: 10px 0;
+    gap: 35px;
+    padding: 20px 0;
   }
   
   .carousel__container::-webkit-scrollbar {
@@ -276,4 +295,65 @@ header{
   
   .carousel__btn.right {
     right: 5px;
+  }
+
+  /************responsive****************/
+  @media (max-width: 768px) {
+    .header__information {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .artcicle__tittle-search {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    .div__search-info {
+      padding-left: 0;
+      text-align: center;
+    }
+    .div__search {
+      width: 100%;
+      padding: 0 20px;
+    }
+    .carousel__btn {
+      display: none;
+    }
+  }
+
+  @media (max-width: 428px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: var(--background-1);
+        height: 100%;
+        padding: 30px 20px;
+        position: relative;
+    }
+
+    .header__title h1 {
+        color: var(--color-1);
+        font-family: "orbitron";
+        font-size: 80px;
+        text-align: center;
+    }
+
+    .trending__music,
+    .section__artist,
+    .section__albums {
+      padding: 1px;
+    }
+
+    .article__trending {
+      padding: 10px;
+    }
+
+    .card {
+        width: 200px;
+    }
+        
   }
