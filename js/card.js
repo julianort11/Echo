@@ -16,7 +16,7 @@ window.crearCardGenerica = function ({ id, title, artist, image }, tipo) {
       card.classList.add("selected");
     }
   
-    const icono = yaFavorito ? "../storage/img/Shape.svg" : "../storage/img/Shape (1).svg";
+    const icono = yaFavorito ? "./storage/img/Shape.svg" : "./storage/img/Shape(1).svg";
   
     card.innerHTML = `
       <img class="card__image" src="${image}" alt="${title}">
@@ -25,7 +25,7 @@ window.crearCardGenerica = function ({ id, title, artist, image }, tipo) {
         <p class="card__subtitle">${artist}</p>
       </div>
       <div class="card__like">
-        <img src="../storage/img/Shape.svg" alt="Me gusta" />
+        <img src="./storage/img/${icono}" alt="Me gusta" />
       </div>
     `;
   
