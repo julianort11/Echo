@@ -11,7 +11,7 @@ function cardAlbums() {
                 image: albums.cover_medium,
             };
 
-            const card = crearCard(albumInfo, "albumes")
+            const card = crearCardGenerica(albumInfo, "albumes")
             divAlbums.appendChild(card);
         });
     };

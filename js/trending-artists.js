@@ -11,7 +11,7 @@ function cardArtists() {
                 image: artist.picture_medium,
             };
 
-            const card = crearCard(artista, "artistas")
+            const card = crearCardGenerica(artista, "artistas")
             divArtist.appendChild(card);
         });
     };

@@ -11,7 +11,7 @@ function cardSongs() {
                 image: track.album.cover_medium,
             };
 
-            const card = crearCard (cancion, "canciones");
+            const card = crearCardGenerica (cancion, "canciones");
             divSongs.appendChild(card);
         });
 
@@ -22,4 +22,4 @@ function cardSongs() {
     document.body.appendChild(script);
 };
 
-window.cardSongs = cardSongs;
+window.cardSongs = cardSongs
