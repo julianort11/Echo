@@ -302,6 +302,13 @@ header::after {
     header {
     height: 100%;
     }
+    .header__title-search {
+      margin-top: 20px;
+    }
+    .header__information {
+      display: flex;
+      gap: 5px;
+    }
   }
   
   @media (max-width: 768px) {
