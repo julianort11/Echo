@@ -25,7 +25,7 @@ window.crearCardGenerica = function ({ id, title, artist, image }, tipo) {
         <p class="card__subtitle">${artist}</p>
       </div>
       <div class="card__like">
-        <img src="./assets/${icono}" alt="Me gusta" />
+        <img src="../storage/img/Shape.svg" alt="Me gusta" />
       </div>
     `;
   
