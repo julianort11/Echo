@@ -17,17 +17,18 @@ window.crearCardGenerica = function ({ id, title, artist, image }, tipo) {
     }
   
     const icono = yaFavorito ? "Shape.svg" : "Shape(1).svg";
-  
+
     card.innerHTML = `
-      <img class="card__image" src="${image}" alt="${title}">
-      <div class="card__body">
-        <p class="card__title">${title}</p>
-        <p class="card__subtitle">${artist}</p>
-      </div>
-      <div class="card__like">
-        <img src="./storage/img/${icono}" alt="Me gusta" />
-      </div>
+        <img class="card__image" src="${image}" alt="${title}" />
+        <div class="card__body">
+            <p class="card__title">${title}</p>
+            <p class="card__subtitle">${artist}</p>
+        </div>
+        <div class="card__like">
+            <img src="./storage/img/${icono}" alt="Me gusta" />
+        </div>
     `;
-  
+
     return card;
-  };
+};
+
